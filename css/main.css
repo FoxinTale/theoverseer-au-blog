@@ -1,0 +1,947 @@
+body {
+    font-family: 'Spectral', sans-serif;
+    font-size: 15px;
+    color: #fefefe;
+    background-color: #000000;
+    text-align: left;
+    line-height: 160%;
+    word-wrap: break-word;
+    letter-spacing: 0.04em;
+    overflow-x: hidden;
+    opacity: 1.0;
+}
+
+
+a {
+    color: #ff002f; 
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: #ff004c;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+p a, .posts li a {
+    border-bottom: 2px solid rgba(255,0,76, 0.75);
+    display: inline-block;
+    position: relative;
+    padding: 2px 2px 0 2px;
+    z-index: 1;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+p a::before, .posts li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2px 2px 0 2px;
+    background-color: rgba(255,0,76, 0.3);
+    z-index: -1;
+    transform: scaleX(0) scaleY(1);
+    transform-origin: left center;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+#home{
+    background-image: url(../images/mainpage.png);
+}
+p a:hover::before, .posts li a:hover::before {transform: scaleX(1) scaleY(1);}
+p a:hover, .posts li a:hover {color: #ff0000; border-bottom: 2px solid rgba(255,0,76, 1.0);}
+
+blockquote {
+    padding: 0 0 0 1.25em;
+    border-left: 1px solid #000000;
+    margin: 1.25em 0 1.25em 1.25em;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #ff0000;
+    letter-spacing: 0.1em;
+    line-height: 140%;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a {color: #ff0000;}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {color: #ff004c}
+h1 {font-size: 1.5em;}
+h2 {font-size: 1.3em;}
+h3 {font-size: 1.25em;}
+h4 {font-size: 1.1em;}
+h5 {font-size: 1em;}
+
+small {font-size: 0.9em;}
+big {font-size: 1.1em;}
+b, bold, strong {color: #ff0000;}
+b a, bold a, strong a {color: #ff002f;}
+b a:hover, bold a:hover, strong a:hover {color: #ff004c;}
+
+.tippy-tooltip.custom-theme {
+    background-color: #000000;
+    color: #ff0000;
+    border-radius: 6px;
+    
+    
+    border: 1px solid #000000;
+    text-align: center;
+    font-family: inherit;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-style: normal;
+    padding: 0.25em;
+    margin: 20px auto auto 10px;
+    font-size: 0.8em;
+}
+
+::-webkit-scrollbar {
+    width: 8px; 
+    height: 20px;
+    background-color: #000000;
+}
+ 
+::-webkit-scrollbar-track {background-color: #000000; border-radius: 20px;}
+ 
+::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+    min-height: 35px;
+    min-width: 35px;
+    border-radius: 10px;
+}
+
+.tmblr-iframe-compact .tmblr-iframe--unified-controls {
+    z-index: 999999999!important;
+    opacity: 0;
+    transform: scale(0.9);
+    transform-origin: 100% 0;
+    margin-top: 0.25em;
+    padding-right: 2.75em;
+    -webkit-transform: scale(0.9);
+    -webkit-transform-origin: 100% 0;
+    -o-transform: scale(0.9);
+    -o-transform-origin: 100% 0;
+    -moz-transform: scale(0.9);
+    -moz-transform-origin: 100% 0;
+    -ms-transform: scale(0.9);
+    -ms-transform-origin: 100% 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+ 
+#pageframe{
+    width: 100%;
+    border: none;
+    margin-left: 5rem;
+}
+.tmblr-iframe-compact .tmblr-iframe--unified-controls:hover {
+    opacity: 1.0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+ 
+.iframe-controls--phone-mobile {display: none!important;}
+.tmblr-iframe-pushdown {padding-top: 0!important;} 
+.tmblr-iframe--app-cta-button {display: none!important;}
+
+/*----- COMMON -----*/
+
+.title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 150%;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.title a {color: #ff0000;}
+.title a:hover {color: #ff004c;}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 6px;
+}
+
+.upper {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9em;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9em;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+}
+
+.navbg {
+    box-sizing: border-box;
+    padding: 2em;
+    background-color: #212121;
+    color: #ff0000;
+    
+    border-radius: 8px;
+    
+}
+
+.navbg a {color: #ff0000;}
+.navbg a:hover {color: #ff004c;}
+
+.navbg .title, .navbg .subtitle, .navbg.subtitle {color: #000000;}
+
+
+
+.padding {padding: 2em;}
+
+.align-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a svg {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+a:hover svg {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/*----- SIDEBAR -----*/
+
+aside {
+    position: fixed;
+    top: 125px;
+    width: 225px;
+}
+
+.right-sidebar aside {margin-left: calc(540px + 125px);}
+
+.sidebar {
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+aside .icon {
+    width: 75px;
+    height: 75px;
+    background-color: #000000;
+    padding: 10px;
+    
+    border: 1px solid #000000;
+    border-radius: 50%;
+    margin: auto auto 1em auto;
+    
+}
+
+
+
+#description {border-bottom: 1px solid #000000;}
+
+#description {padding-bottom: 1.5em; margin-top: 1em;}
+nav {margin-top: 1.5em;}
+
+
+nav {
+    text-align: left;
+    width: 100%;
+ /*   counter-reset: links-counter; */
+}
+
+nav li {list-style-type: none;}
+nav a {display: inline-block; color: #ff0000;}
+
+/*
+nav a::before {
+    counter-increment: links-counter;
+    content: '0'counter(links-counter);
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+    
+    color: #ff0000;
+    margin-right: 0.75em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+*/
+nav a:hover {
+    
+    color: #ff0000;
+}
+
+nav a:hover::before {
+    color: #ff004c;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+nav li::before {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004c;
+    display: inline-block;
+    border-radius: 3px;
+    margin: auto 0.5em 0.2em auto;
+    vertical-align: middle;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+nav li:hover::before {
+    width: 1em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/*----- HEADER -----*/
+
+header {
+    position: fixed;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    text-align: center;
+    
+    border-bottom: 1px solid #000000;
+    z-index: 10;
+}
+
+header .title {font-size: 1.25em;}
+
+header svg, header a svg {
+    width: 1.5em; 
+    height: 1.5em;
+    display: inline-block;
+    vertical-align: middle;
+    fill: #ff002f;
+}
+
+header a:hover svg {fill: #ff004c;}
+.updates-button-wrap {width: 1.5em; height: 1.5em;}
+.updates-clicked svg {fill: #ff004c;}
+.close-icon {display: none;}
+.updates-clicked .bell-icon {display: none;}
+.updates-clicked .close-icon {display: block;}
+
+/*----- UPDATES TAB -----*/
+
+#updates-tab {
+    width: 200px;
+    position: fixed;
+    z-index: 10;
+    top: 4.75em;
+    left: 15px;
+    display: none;
+}
+
+#updates-tab .navbg {
+    padding: 0.75em 1em; 
+    border-bottom: 1px solid #000000;
+    
+    border-radius: 0;
+    
+}
+
+.updates-container {
+    background-color: #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    border: 1px solid #000000;
+    margin-bottom: 10px;
+}
+
+.updates-text {padding: 1em;}
+#currently li {list-style-type: none;}
+#currently .upper {color: #ff0000; margin-right: 0.25em;}
+
+/*----- POSTS -----*/
+
+main {
+    width: calc(225px + 125px + 540px);
+    margin: auto;
+    position: relative;
+}
+
+#posts-container {
+    width: 540px;
+    position: relative;
+}
+
+.left-sidebar #posts-container {margin: 125px 0 125px 350px;}
+.right-sidebar #posts-container {margin: 125px 0;}
+
+article {
+    width: 100%;
+    margin: 150px auto;
+    position: relative;
+}
+
+article:first-of-type {margin-top: 0;}
+
+.posts {
+    box-sizing: border-box;
+    
+}
+
+.tumblr_video_container {max-height: 540px!important; overflow: hidden!important;}
+.posts li, .posts blockquote, .posts img, figure, video, .video {max-width: 100%;}
+
+/*----- CAPTION -----*/
+
+.caption {
+    
+    padding: 2em 0;
+    border-bottom: 1px solid #000000;
+    list-style-type: none;
+}
+
+
+.text-cap:first-of-type {padding-top: 0;}
+
+
+.caption p {margin: 1em 0;}
+.caption p:last-of-type {margin-bottom: 0;}
+.ogcap p:first-of-type {margin-top: 0;}
+.caption iframe, .caption img {max-width: 100%;}
+
+
+
+
+.user-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.user-wrap .icon {
+    width: 2em; 
+    height: 2em; 
+    margin-right: 0.25em;
+}
+
+.username {
+    display: inline-block; 
+    vertical-align: middle;
+    line-height: 1em;
+}
+
+.posts .username a {
+    color: #000000;
+    background-color: #212121;
+    padding: 0.6em 0.75em;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-left: 0.25em;
+}
+
+.posts .username a, .posts .username a:hover {border-bottom: none; transform: none;}
+.posts .username a::before {display: none;}
+.posts .username a:hover {background-color: #ff004c; color: #fff;}
+
+.deactive::after {
+    content: '(deactivated)';
+    margin-left: 1em;
+    color: #fefefe;
+    opacity: 0.9;
+}
+
+/*----- TEXT -----*/
+
+h1.post-title {
+    
+    
+    margin-top: 0;
+    
+}
+
+article .posts a.read_more, a.more_notes_link {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Libre Baskerville', serif;
+    color: #fff;
+    background-color: #ff004c;
+    padding: 0.5em 0.75em;
+    border-radius: 6px;
+    border-bottom: none;
+    font-weight: bold;
+}
+ 
+article .posts a.read_more:hover, a.more_notes_link:hover {background-color: #ff0000}
+a.read_more::before, a.more_notes_link::before {display: none;}
+
+pre {
+    line-height: inherit;
+    font-size: inherit;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    background-color: #212121;
+    color: #ff0000;
+    padding: 1.5em;
+    border-radius: 6px;
+}
+ 
+@font-face {
+    font-family: Calluna;
+    src: url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.eot?3=&v=f685dc881c60c298ea22a73fe505b88a");
+    src: url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.eot?3%3F=&v=f685dc881c60c298ea22a73fe505b88a#iefix") format("embedded-opentype"),url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.woff?3=&v=760a50f4d098e59aebaf0f0e58ae2cc8") format("woff"),url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.ttf?3=&v=5ace789439bff3b27f8d4112725531da") format("truetype"),url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.svg?3=&v=5b95c481dd7411c6e112143d6646bd9b#_.regular") format("svg");
+    font-weight: 700;
+    font-style: italic
+}
+ 
+@font-face {
+    font-family: Fairwater;
+    src: url("https://assets.tumblr.com/fonts/fairwater/fairwater_script_regular-webfont.woff2?v=b7ab7a58cded3365889a447bfd9e9c45") format("woff2"),url("https://assets.tumblr.com/fonts/fairwater/fairwater_script_regular-webfont.woff?v=96e975b7468359e6f67086305577e43e") format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+ 
+p.npf_quirky {font-family: Fairwater; font-size: 20px;}
+ 
+.npf_color_joey {color: #e57373;}
+.npf_color_monica {color: #ff8a65;}
+.npf_color_phoebe {color: #ffee58;}
+.npf_color_ross {color: #81c784;}
+.npf_color_rachel {color: #4fc3f7;}
+.npf_color_chandler {color: #9575cd;}
+.npf_color_niles {color: #f06292;}
+
+#k {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 15px;
+    background-color: #000000;
+    color: #ff002f;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+ 
+#k:hover {background-color: #ff004c; color: #fff;}
+ 
+#m {
+    text-align: center;
+    display: none;
+    margin-bottom: 50px;
+}
+
+/*----- LINK -----*/
+
+a.link-wrap {
+    display: block;
+    color: #ff0000;
+    background-color: #212121;
+    
+    
+    border-radius: 8px;
+    overflow: hidden;
+    
+    
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+a.link-wrap:hover .link-host, .npf-link-block:hover {
+    background-color: rgba(255,0,76, 0.35);
+    color: #fff;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+a.link-wrap:hover .link-host {padding-left: 3em; background-color: #ff004c;}
+a.link-wrap:hover .link-host svg {fill: #fff;}
+
+.link {
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    -ms-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+a.link-wrap .title {
+    color: #fff; 
+    text-align: center;
+    padding: 1.25em;
+}
+
+.link-host {
+    background-color: rgba(33,33,33, 0.75);
+    color: #ff0000;
+    padding: 2em;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.link-host svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5em;
+    height: 1.5em;
+    fill: #ff0000;
+    margin-right: 0.5em;
+}
+
+.npf-link-block {
+    margin-top: 1.25em;
+    border-radius: 6px;
+    
+    border: 1px solid #000000;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+ 
+.npf-link-block .poster .title {background-color: initial; padding: 1.5em;}
+.npf-link-block.no-poster .title {padding: 1.5em 1.5em 0 1.5em;}
+.npf-link-block .title {font-size: 1.25em; border-bottom: none;}
+.npf-link-block .bottom {padding: 1.5em !important; color: #fefefe;}
+ 
+.npf-link-block .bottom .site-name {
+    font-size: 0.9em;
+    color: #fefefe;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+}
+
+/*----- PHOTO -----*/
+ 
+img {
+    margin: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+ 
+.photo img {
+    width: 100%;
+    
+    border-radius: 8px;
+    
+}
+
+.vignette, #vignette {opacity: 0;}
+.tmblr-lightbox, #tumblr_lightbox {background-color: rgba(60, 60, 60, 0.75) !important;}
+ 
+.lightbox-image, #tumblr_lightbox img {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    max-width: none;
+}
+ 
+/*----- PHOTOSET -----*/
+
+.post-content div.npf_row, .post div.npf_row, body div.npf_row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+.photo-slideshow, .npf_photoset {
+    
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+
+
+
+
+.npf_photoset {margin: 1.5em 0;}
+
+
+.captext figure {margin: 1em 0;}
+.captext figure .tmblr-full {margin-top: 4px;}
+.tmblr-full:hover {cursor: pointer;}
+.npf_image, .tmblr-full {border: none; outline: none;}
+
+figure.tmblr-full a, figure.tmblr-full a:hover {border-bottom: none;}
+figure.tmblr-full a::before, figure.tmblr-full a:hover::before {display: none;}
+
+/*----- QUOTE -----*/
+
+.quote, p.npf_quote {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5em;
+    line-height: 160%;
+    font-weight: bold;
+}
+
+.quote.navbg {padding: 1.5em;}
+.quote {color: #000000;}
+
+.quote p:first-of-type {margin-top: 0;}
+.quote p:last-of-type {margin-bottom: 0;}
+p.npf_quote {font-family: inherit; margin-bottom: 1em;}
+
+.source {
+    
+    margin-top: 2em;
+    text-align: right;
+}
+
+/*----- CHAT -----*/
+
+.chat {padding: 0; margin: 0;}
+.chat li {list-style-type: none;}
+
+.line {
+    
+    padding: 2em 0;
+    border-bottom: 1px solid #000000;
+}
+
+p.npf_chat {font-family: inherit; margin-top: 0.5em;}
+p.npf_chat:first-of-type {margin-top: 1.25em;}
+
+p.npf_chat b {
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9em;
+}
+
+.chatter {color: #ff0000; letter-spacing: 0.1em; font-weight: bold;}
+
+/*----- ASK -----*/
+
+.asker-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.asker-wrap .icon {
+    width: 3em;
+    height: 3em;
+    margin-right: 1.5em;
+}
+
+.question {margin-top: 1em;}
+.question p:first-of-type {margin-top: 0;}
+.question p:last-of-type {margin-bottom: 0;}
+
+.asker-wrap a {color: #ff0000;}
+.asker-wrap a:hover {color: #ff004c;}
+.question a {color: #ff004c;}
+.question a:hover {color: #ff0000;}
+
+/*----- INFO -----*/
+
+.info {margin-top: 2em;}
+
+.info-left a {margin-right: 1em; display: inline-block;}
+.info li {list-style-type: none;}
+
+.type a {
+    background-color: #ff004c;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+}
+
+.type a:hover {background-color: #ff0000; color: #fff;}
+
+
+
+.info-controls {
+    flex-shrink: 0; 
+    
+}
+
+.info-controls a {margin-left: 1em;}
+
+.info-controls a svg {
+    width: 1.5em;
+    height: 1.5em;
+    fill: #ff0000;
+    display: inline-block; 
+    vertical-align: middle;
+}
+
+.info-controls a:hover svg {fill: #ff004c;}
+
+
+/*----- TAGS -----*/
+
+.tags {margin-top: 1.25em; font-size: 0.8em;}
+
+.tags a {
+    background-color: #000000;
+    color: #fefefe;
+    padding: 0.5em 1em;
+    display: inline-block;
+    margin: 0 1em 0.75em 0;
+    
+    border: 1px solid #000000;
+    border-radius: 8px;
+}
+
+.tags a:hover {
+    background-color: #ff004c; 
+    color: #000000;
+    
+    border: 1px solid #ff004c;
+    
+}
+
+a.tag-button.tag-clicked svg {fill: #ff004c;}
+
+.td-page {
+    
+    overflow: hidden;
+}
+
+.td-page span {
+    color: #ff004c;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9em;
+}
+
+/*----- POST NOTES -----*/
+
+
+.post-notes .navbg {
+    background-color: #000000;
+    color: #fefefe;
+    padding: 0 0 2em 0;
+}
+
+
+#notetitle {
+     
+    font-size: 1.25em;
+}
+
+
+/*----- MOBILE CONTROLS -----*/
+
+.mobile-controls {display: none;}
+.mobile-controls a {margin-left: 0.75em;}
+
+/*----- PAGINATION -----*/
+
+.pg {
+    
+    
+    border-top: 1px solid #000000;
+    padding-top: 2em;
+    
+}
+
+/*----- MEDIA QUERIES -----*/
+
+@media only screen and (max-width: 1024px) {
+    main {width: 540px;}
+    .left-sidebar #posts-container, .right-sidebar #posts-container {width: 100%; margin: 125px auto;}
+    
+    .left-sidebar aside, .right-sidebar aside {
+        position: static;
+        width: 100%;
+        margin: 125px auto 150px auto;
+    }
+    
+    aside nav li {display: inline-block; margin-right: 0.75em;}
+} 
+
+@media only screen and (max-width: 700px) {
+    main {
+        
+        width: 85vw;
+    }
+    
+    .viasrc {display: none;}
+    
+    header .title {display: none;}
+    .controls-icon, .tmblr-iframe-compact .tmblr-iframe--unified-controls {display: none;}
+    .mobile-controls {display: block;}
+    
+    #k {display: none;}
+    #m {display: block;}
+}
+
+@media only screen and (max-height: 760px) {
+    aside nav {max-height: 175px; overflow-y: auto;}
+}
