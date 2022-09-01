@@ -26,7 +26,7 @@
 
 /* The main page stuff. */
 body {
-    font-family: sans-serif; 
+    font-family: 'Spectral', sans-serif; 
     background-color: black;
     letter-spacing: 0.04em;
     overflow-x: hidden;
@@ -40,6 +40,7 @@ body {
 
 h1{
     color: darkred;
+    font-family: 'Libre Baskerville', sans-serif;
 }
 p{
     color: white;
@@ -93,11 +94,13 @@ ul li{
 
 /* Nav stuff */
 #sidenav{
-    width: 15%;
-    border: 2.5px solid red;
+    position: fixed;
+    top: 125px;
+    width: 225px;
+    border: 2.5px solid darkred;
     border-radius: 5px;
-    margin-left: 1rem;
     padding: 0.5rem;
+    margin-left: 1rem;
 }
 
 #sidenav a, #sidenav p{
@@ -159,4 +162,15 @@ nav{
 
 #pagespot{
     display: block;
+    width: 900px;
+    margin: auto;
+    position: relative;  
+    border: 2.5px solid white;
+    border-radius: 5px;
+}
+
+img{
+    width: 875px;
+    border: none;
+    padding:5px;
 }

@@ -3,29 +3,30 @@
 
 <html>
 <head>
-<title>The Overseer's Souls</title>
-<link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet"/>
-<link rel="stylesheet" href="css/main.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>The Overseer's Souls</title>
+    <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Spectral&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
-
 <body>
-<h1>The Overseer's Souls</h1>
+<header>The Overseer's Souls</header>
 <nav id="sidenav">
     <p>An Undertale AU that focuses on a post-pacifist Frisk and Chara uncovering the secrets of the humans that came before them.</p>
     <hr class="sep">
         <a class="bar-item nav-button" href="/">Home</a>
         <a class="bar-item nav-button" onclick="dropdown('comicsmenu')" href="javascript:void(0)">Comics &nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
         <div id="comicsmenu" class="hide">
-            <a class='bar-item nav-button' href='part_1.html' target='pages'>Part One</a>
-            <a class='bar-item nav-button' href='part_2.html' target='pages'>Part Two</a>
-            <a class='bar-item nav-button' href='part_3.html' target='pages'>Part Three</a>
+            <a class='bar-item nav-button' href="javascript:pageRender('part_1.html')">Part One</a>
+            <a class='bar-item nav-button' href="javascript:pageRender('part_2.html')">Part Two</a>
+            <a class='bar-item nav-button' href="javascript:pageRender('part_3.html')">Part Three</a>
         </div>
         <a class="bar-item nav-button" href="/ask">Ask</a>
-        <a class="bar-item nav-button" href="/archive">Archive</a>
+        <!-- <a class="bar-item nav-button" href="/archive">Archive</a> -->
 </nav>
-
 <div id="pagespot"></div>
 
 <script type="text/javascript">
