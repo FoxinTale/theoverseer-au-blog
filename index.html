@@ -18,32 +18,19 @@
         <a class="bar-item nav-button" href="/">Home</a>
         <a class="bar-item nav-button" onclick="dropdown('comicsmenu')" href="javascript:void(0)">Comics &nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
         <div id="comicsmenu" class="hide">
-            <a class='bar-item nav-button' href='partone.html' target='pages'>Part One</a>
-            <a class='bar-item nav-button' href='parttwo.html' target='pages'>Part Two</a>
-            <a class='bar-item nav-button' href='newweapon.php' target='pages'>Part Three</a>
+            <a class='bar-item nav-button' href='part_1.html' target='pages'>Part One</a>
+            <a class='bar-item nav-button' href='part_2.html' target='pages'>Part Two</a>
+            <a class='bar-item nav-button' href='part_3.html' target='pages'>Part Three</a>
         </div>
         <a class="bar-item nav-button" href="/ask">Ask</a>
         <a class="bar-item nav-button" href="/archive">Archive</a>
 </nav>
 
 <div id="pagespot"></div>
-<!---
-<iframe id="pageframe" name="pages">
-    <p>I-frames aren't supported. Sorry. Use a browser that doesn't suck.</p>
-</iframe>
- --->
+
 <script type="text/javascript">
     window.onload  = pageRender("home.html");
-    var frame = document.getElementById("pageframe");
-               
-    pageframe.onload = function(){
-        console.log(pageframe.src);
-    };
 
-    function setFrameSrc(url){
-            pageframe.src = url;
-    }
-    
     function pageRender(url){
         jQuery(document).ready(function ($) {
             $("#pagespot").load(url);
