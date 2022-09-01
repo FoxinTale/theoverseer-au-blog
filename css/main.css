@@ -1,0 +1,127 @@
+/* Font Awesome for the arrow stuff.*/
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0');
+    font-weight: normal;
+    font-style: normal
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+}
+
+.fa-remove:before {
+    content: "\f00d";
+}
+
+.fa-caret-down:before {
+    content: "\f0d7";
+}
+
+.fa-bars:before {
+    content: "\f0c9";
+}
+
+
+body {
+    background-color: black;
+}
+
+h1{
+    color: darkred;
+}
+p{
+    color: white;
+}
+
+a, ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.sep{
+    margin: 2rem;
+   border: 2px solid darkred;
+    border-right: 5px;
+}
+
+#sidenav{
+    width: 15%;
+    border: 2.5px solid red;
+    border-radius: 5px;
+    margin-left: 1rem;
+    padding: 0.5rem;
+}
+
+#sidenav a, #sidenav p{
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 500ms;
+    color: white;
+}
+
+iframe{
+    margin-left:5rem;
+    width:90%;
+    border: none;
+    height: 45rem;
+}
+
+.nav-button {
+    color: white;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.nav-button {
+    white-space: normal;
+}
+
+.bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+}
+
+#comicsmenu a{
+    margin-left: 1rem;
+}
+
+#comicsmenu a:hover{
+    
+}
+
+.hide {
+    display: none!important;
+}
+
+.show {
+    display: block!important;
+}
+
+#pagespot{
+    background-color: aliceblue;
+    width: 75%;
+}

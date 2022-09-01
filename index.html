@@ -4,67 +4,63 @@
 <html>
 <head>
 <title>The Overseer's Souls</title>
+<link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet"/>
 <link rel="stylesheet" href="css/main.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
-    
-    <header class="align-flex">
-    <div class="title"><a href="/">The Overseer's Souls</a></div>
 
-</header>
-<main class="left-sidebar">
 
-<!----- SIDEBAR ----->
+<body>
+<h1>The Overseer's Souls</h1>
+<nav id="sidenav">
+    <p>An Undertale AU that focuses on a post-pacifist Frisk and Chara uncovering the secrets of the humans that came before them.</p>
+    <hr class="sep">
+        <a class="bar-item nav-button" href="/">Home</a>
+        <a class="bar-item nav-button" onclick="dropdown('comicsmenu')" href="javascript:void(0)">Comics &nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+        <div id="comicsmenu" class="hide">
+            <a class='bar-item nav-button' href='partone.html' target='pages'>Part One</a>
+            <a class='bar-item nav-button' href='parttwo.html' target='pages'>Part Two</a>
+            <a class='bar-item nav-button' href='newweapon.php' target='pages'>Part Three</a>
+        </div>
+        <a class="bar-item nav-button" href="/ask">Ask</a>
+        <a class="bar-item nav-button" href="/archive">Archive</a>
+</nav>
 
-<div class="sidebar">
-    <div id="description">An Undertale AU that focuses on a post-pacifist Frisk and Chara uncovering the secrets of the humans that came before them.</div>
-        <nav class="upper infobg">
-            <li><a href="/">Home</a></li>
-            <li><a href="">Comics</a></li>
-            <div id="creation" class="hide">
-                <a class='bar-item nav-button' href='' target='pages'>Ability / Power / Spell</a>
-                <a class='bar-item nav-button' href='newchar.php' target='pages'>Character</a>
-                <a class='bar-item nav-button' href='newitem.php' target='pages'>Item</a>
-                <a class='bar-item nav-button' href='newweapon.php' target='pages'>Weapon</a>
-            </div>
-            <li><a href="/ask">ask</a></li>
-            <li><a href="/archive">archive</a></li>
-        </nav>
-</div>
-
-      <iframe id="pageframe" name="pages">
-                <p>I-frames aren't supported. Sorry. Use a browser that doesn't suck.</p>
-        </iframe>
- 
+<div id="pagespot"></div>
+<!---
+<iframe id="pageframe" name="pages">
+    <p>I-frames aren't supported. Sorry. Use a browser that doesn't suck.</p>
+</iframe>
+ --->
 <script type="text/javascript">
-       window.onload  = setFrameSrc("home.html");
-               var frame = document.getElementById("pageframe");
+    window.onload  = pageRender("home.html");
+    var frame = document.getElementById("pageframe");
                
-               pageframe.onload = function(){
-                 console.log(pageframe.src);
-               };
+    pageframe.onload = function(){
+        console.log(pageframe.src);
+    };
 
-                function setFrameSrc(url){
-                    pageframe.src = url;
-                }
-
-                window.onmessage = function(event){
-                    if (event.data === 'login' || event.data === 'logout') {
-                        window.location.reload(true);
-                        setFrameSrc('home.php');
-                    }
-                };
-    
-function dropdown(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("show") === -1) {
-        x.className += " show";
-        x.previousElementSibling.className += " theme";
-    } else {
-        x.className = x.className.replace("show", "");
-        x.previousElementSibling.className =
-                x.previousElementSibling.className.replace(" theme", "");
+    function setFrameSrc(url){
+            pageframe.src = url;
     }
-}    
+    
+    function pageRender(url){
+        jQuery(document).ready(function ($) {
+            $("#pagespot").load(url);
+        });
+    }
+
+    function dropdown(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("show") === -1) {
+            x.className += " show";
+            x.previousElementSibling.className += " theme";
+        } else {
+            x.className = x.className.replace("show", "");
+            x.previousElementSibling.className =
+            x.previousElementSibling.className.replace(" theme", "");
+        }
+    }    
 </script>
-</main>
+</body>
 </html>
