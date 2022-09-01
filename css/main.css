@@ -1,4 +1,4 @@
-/* Font Awesome for the arrow stuff.*/
+/* Font Awesome for the arrow stuff on the dropdown menu.*/
 @font-face {
     font-family: 'FontAwesome';
     src: url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0');
@@ -23,6 +23,25 @@
 .fa-bars:before {
     content: "\f0c9";
 }
+
+/* Stuff for the scrollbar. */
+::-webkit-scrollbar {
+    width: 8px; 
+    height: 20px;
+    background-color: #f2f2f2;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #f2f2f2; border-radius: 20px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color: #121212;
+    min-height: 35px;
+    min-width: 35px;
+    border-radius: 10px;
+}
+
 
 /* The main page stuff. */
 body {
@@ -76,21 +95,15 @@ ul li{
     border-right: 5px;
 }
 
-::-webkit-scrollbar {
-    width: 8px; 
-    height: 20px;
-    background-color: #f2f2f2;
-}
- 
-::-webkit-scrollbar-track {background-color: #f2f2f2; border-radius: 20px;}
- 
-::-webkit-scrollbar-thumb {
-    background-color: #121212;
-    min-height: 35px;
-    min-width: 35px;
-    border-radius: 10px;
-}
 
+.title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.75em;
+    letter-spacing: 0.1em;
+    line-height: 150%;
+    color: darkred;
+    font-weight: bold;
+}
 
 /* Nav stuff */
 #sidenav{
@@ -133,6 +146,7 @@ nav{
     white-space: normal;
 }
 
+/* Other*/
 .bar-item {
     width: 100%;
     display: block;
