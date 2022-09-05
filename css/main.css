@@ -1,4 +1,4 @@
-/* Font Awesome for the arrow stuff on the dropdown menu.*/
+/* Font Awesome for the arrow on the dropdown menu.*/
 @font-face {
     font-family: 'FontAwesome';
     src: url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0');
@@ -61,6 +61,7 @@ h1{
     color: darkred;
     font-family: 'Libre Baskerville', sans-serif;
 }
+
 p{
     color: white;
 }
@@ -85,16 +86,12 @@ a:hover{
     transition: all 0.3s;
 }
 
-ul li{
-    list-style-type: none;
-}
 
 .sep{
     margin: 2rem;
-   border: 2px solid darkred;
+    border: 2px solid darkred;
     border-right: 5px;
 }
-
 
 .title {
     font-family: 'Libre Baskerville', serif;
@@ -103,6 +100,10 @@ ul li{
     line-height: 150%;
     color: darkred;
     font-weight: bold;
+}
+
+#description{
+    
 }
 
 /* Nav stuff */
@@ -116,34 +117,78 @@ ul li{
     margin-left: 1rem;
 }
 
+.info {
+    box-sizing: border-box;
+    padding: 2em;
+    background-color: #212121;
+    color: #d5d5d5;
+}
+
+.info a {color: #d5d5d5;}
+.info a:hover {color: #83bfe4;}
+
 #sidenav a, #sidenav p{
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
     transition: 500ms;
     color: white;
 }
+nav li {list-style-type: none;}
 
-nav{
-    text-align: left;
-    width: 100%;
-}
-
-
-.nav-button {
-    color: white;
+nav a {
     display: inline-block;
-    padding: 8px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
+    color: #d5d5d5;
 }
 
-.nav-button {
-    white-space: normal;
+nav a::before {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 0.75em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+nav a:hover{
+    color: #fff !important;
+    
+}
+
+nav a:hover::before {
+    color: #83bfe4;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+nav li::before {
+    content: '';
+    width: 0;
+    height: 3px;
+    display: inline-block;
+    border-radius: 3px;
+    margin: auto 0.5em 0.2em auto;
+    vertical-align: middle;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+nav li:hover::before {
+    width: 1em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 /* Other*/
@@ -162,9 +207,6 @@ nav{
     margin-left: 1rem;
 }
 
-#comicsmenu a:hover{
-
-}
 
 .hide {
     display: none!important;
@@ -172,6 +214,11 @@ nav{
 
 .show {
     display: block!important;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 #pagespot{

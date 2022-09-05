@@ -14,19 +14,21 @@
 
 <body>
 <header class="title">The Overseer's Souls</header>
-<nav id="sidenav">
-    <p>An Undertale AU that focuses on a post-pacifist Frisk and Chara uncovering the secrets of the humans that came before them.</p>
-    <hr class="sep">
-        <a class="bar-item nav-button" href="/">Home</a>
-        <a class="bar-item nav-button" onclick="dropdown('comicsmenu')" href="javascript:void(0)">Comics &nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
-        <div id="comicsmenu" class="hide">
-            <a class='bar-item nav-button' href="javascript:pageRender('part_1.html')">Part One</a>
-            <a class='bar-item nav-button' href="javascript:pageRender('part_2.html')">Part Two</a>
-            <a class='bar-item nav-button' href="javascript:pageRender('part_3.html')">Part Three</a>
-        </div>
-        <!-- <a class="bar-item nav-button" href="/ask">Ask</a> -->
-        <!-- <a class="bar-item nav-button" href="/archive">Archive</a> -->
-</nav>
+<aside>
+    <nav id="sidenav" class="info">
+        <p id="description">An Undertale AU that focuses on a post-pacifist Frisk and Chara uncovering the secrets of the humans that came before them.</p>
+        <hr class="sep">
+            <li><a class="bar-item nav-button" href="/">Home</a></li>
+            <li><a class="bar-item nav-button" onclick="dropdown('comicsmenu')" href="javascript:void(0)">Comics &nbsp;&nbsp;<i class="fa fa-caret-down"></i></a></li>
+            <div id="comicsmenu" class="hide">
+                <a class='bar-item nav-button' href="javascript:pageRender('part_1.html')">Part One</a>
+                <a class='bar-item nav-button' href="javascript:pageRender('part_2.html')">Part Two</a>
+                <a class='bar-item nav-button' href="javascript:pageRender('part_3.html')">Part Three</a>
+            </div>
+            <!-- <a class="bar-item nav-button" href="/ask">Ask</a> -->
+            <!-- <a class="bar-item nav-button" href="/archive">Archive</a> -->
+    </nav>
+</aside>
 <div id="pagespot"></div>
 
 <script type="text/javascript">
