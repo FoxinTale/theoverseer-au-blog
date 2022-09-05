@@ -62,8 +62,12 @@ h1{
     font-family: 'Libre Baskerville', sans-serif;
 }
 
-p{
+p, section{
     color: white;
+}
+
+section{
+    text-align: center;
 }
 
 a{
@@ -234,4 +238,34 @@ img{
     width: 875px;
     border: none;
     padding:5px;
+}
+
+li{
+    padding-left: 2rem;
+    list-style-type: none;
+    text-align: left;
+}
+
+li:last-child{
+    padding-bottom: 2rem;
+}
+
+.transcript{
+    border: 2.5px solid white;
+    border-radius: 5px;
+    margin: 2rem;
+}
+
+.accordion{
+    padding: 5px;
+    border-radius: 2.5px;
+    background-color: transparent;
+    color: white;
+    width: 100%;
+}
+
+.transcript-text{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
 }

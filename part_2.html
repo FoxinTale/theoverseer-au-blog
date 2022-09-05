@@ -1,18 +1,62 @@
 <head>
-    <title>The Overseer's Souls</title>
-    <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Spectral&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <title>The Overseer's Souls
+  </title>
+  <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Spectral&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+  </script>
 </head>
-
 <body>
-    <img src="images/part_2/002_01.png">
-    <section>Description go here.</section>
-    <hr class="sep"><br>
-    <img src="images/part_2/002_02.png">
-        <br>
-    <img src="images/part_2/002_03.png">
+  <img src="images/part_2/002_01.png">
+  <div class="transcript">
+    <button onclick="doaccordion('panel_one')" class="accordion w3-left-align">Click for panel one transcript.
+    </button>
+    <section id="panel_one" class="hide"><br>
+        <p class=transcript-text>
+            Setting -  A house on the surface world belonging to Mettaton, Napstablook, and Mad Mew Mew. A conversation is heard from outside of it. On the inside, alphys, Napstablook Frisk and Chara are gatherd in a circle, conversing in the living room. Napstablook and Chara are floating, whilst the others are sitting on stools.
+        </p>
+        <li>Alphys: "S-so these d-reams just k-keep happening?"</li>
+        <li>Chara: "Yeah...it's really weird."</li>
+        <li>Chara: "The strangest thing is that I can remember everything in them. It's not like how dreams are supposed to be."</li>
+        <li>Napstablook: "I thought teaching you to sleep as a ghost would help. I guess it just caused problems. sorry..." </li>
+        <li>Chara: "No, no! It's just fine.  I love being able to sleep now after being forced awake for all those months after connecting to Frisk."</li>
+    </section>
+  </div>
+  <hr class="sep">
+  <br><br>
+  <img src="images/part_2/002_02.png">
+  <div class="transcript">
+    <button onclick="doaccordion('panel_two')" class="accordion w3-left-align">Click for panel two transcript.
+    </button>
+    <section id="panel_two" class="hide">
+        <li>Alphys: <i>She pulls out a notebook and pen</i> "D-do you think you c-could tell me what this d-dream was about?"</li>
+    </section>
+  </div>
+  <hr class="sep">
+  <br>
+  <img src="images/part_2/002_03.png">
+  <div>
+    <button onclick="doaccordion('panel_three')" class="accordion w3-left-align">Click for panel three transcript.
+    </button>
+    <section id="panel_three" class="hide transcript-text">Description go here.
+    </section>
+  </div>
+    <br><br>
 </body>
+<script type="text/javascript">
+  function doaccordion(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("show") == -1) {
+      x.className += " show";
+      x.previousElementSibling.className += " w3-light-purple2";
+    }
+    else {
+      x.className = x.className.replace("show", "");
+      x.previousElementSibling.className =
+        x.previousElementSibling.className.replace("w3-light-purple2", "");
+    }
+  }
+</script>
